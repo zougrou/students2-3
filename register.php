@@ -43,8 +43,10 @@
                                 <span id="email_status"></span>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="userphone" id="UserPhone" maxlength="8" placeholder="Entrez votre numéro de tel" class="form-control" onkeyup="checkphone();">
-                                <span id=" phone_status"></span>
+                                <input type="tel" name="userphone" id="UserPhone" placeholder="Phone" class="form-control" maxlength="8" onkeyup="checkphone();">
+                                <span id="phone_status"></span>
+                                <!-- <input type="tel" name="userphone" id="UserPhone" maxlength="8" placeholder="Entrez votre numéro de tel" class="form-control" onkeyup="checkphone();">
+                                <span id=" phone_status"></span> -->
                             </div>
                             <div class="form-group">
                                 <input type="password" name="userpass" id="UserPassword" class="form-control" placeholder="password" required>
@@ -58,9 +60,9 @@
                             </div>
                             <div class="form-group">
                                 <p>Quelle est votre genre ? </p>
-                                <input type="radio" name="sex" id="agree-term" class="agree-term" value="male" checked />
+                                <input type="radio" name="sex" id="agree-term" class="agree-term" value="Homme" checked />
                                 <label for="agree-term" class="label-agree-term">Homme</label>
-                                <input type="radio" name="sex" id="agree-term" class="agree-term" value="femelle" />
+                                <input type="radio" name="sex" id="agree-term" class="agree-term" value="Femme" />
                                 <label for="agree-term" class="label-agree-term">Femme</label>
                                 <input type="radio" name="sex" id="agree-term" class="agree-term" value="autre" />
                                 <label for="agree-term" class="label-agree-term">Autre</label>

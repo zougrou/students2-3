@@ -3,7 +3,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'taken';
+$db = 'zougroustd';
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 

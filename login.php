@@ -51,6 +51,12 @@
 							</div>
 							<br>
 						</form>
+						<!-- <div style="margin-top:10px" class="form-group">
+							<div class="col-sm-12 controls">
+								Email: <b>christ@gmail.com</b> <br>
+								password: <b>55555</b> <br><br>
+							</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -71,7 +77,7 @@
 						url: "check.php",
 						type: "POST",
 						data: {
-							type: 2,
+							type: 1,
 							email: email,
 							password: password
 						},
@@ -79,9 +85,9 @@
 						success: function(dataResult) {
 							var dataResult = JSON.parse(dataResult);
 							if (dataResult.statusCode == 200) {
-								location.href = 'welcome.php';
+								location.href = 'good.php';
 							} else if (dataResult.statusCode == 201) {
-								alert('Mauvais mail ou mdp');
+								alert('Mauvais mail ou mot de passe');
 							}
 
 						}

@@ -3,29 +3,44 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'taken';
+$db = 'zougroustd';
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
-if(isset($_POST['user_phone']))
-{
-    $phone=$_POST['user_phone'];
+if (isset($_POST['user_phone'])) {
+    $phone = $_POST['user_phone'];
 
-    $checkdata=" SELECT phone FROM users WHERE phone='$phone' ";
+    $checkdata = " SELECT phone FROM users WHERE phone='$phone' ";
 
     $query = mysqli_query($conn, $checkdata);
     $count = mysqli_num_rows($query);
 
-    if($count>0)
-    {
+    if ($count > 0) {
         echo "Numéro Existe Déja";
-    }
-    else
-    {
+    } else {
         echo "OK";
     }
     exit();
 }
+// if(isset($_POST['user_phone']))
+// {
+//     $phone=$_POST['user_phone'];
+
+//     $checkdata=" SELECT phone FROM users WHERE phone='$phone' ";
+
+//     $query = mysqli_query($conn, $checkdata);
+//     $count = mysqli_num_rows($query);
+
+//     if($count>0)
+//     {
+//         echo "Numéro Existe Déja";
+//     }
+//     else
+//     {
+//         echo "OK";
+//     }
+//     exit();
+// }
 
 if(isset($_POST['user_email']))
 {

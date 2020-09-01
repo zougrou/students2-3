@@ -3,11 +3,11 @@
     $host = 'localhost';
     $user = 'root';
     $pass = '';
-    $db = 'taken';
+    $db = 'zougroustd';
     
     $conn = mysqli_connect($host, $user, $pass, $db);
 	
-	if($_POST['type']==2){
+	if($_POST['type']==1){
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 		$check=mysqli_query($conn,"select * from users where email='$email' and password='$password'");
@@ -22,7 +22,7 @@
 		mysqli_close($conn);
 	}
 
-if ($_POST['type'] == 3) {
+if ($_POST['type']==2) {
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$check = mysqli_query($conn, "select * from teacher where email='$email' and password='$password'");

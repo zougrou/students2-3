@@ -70,7 +70,7 @@
                         url: "check.php",
                         type: "POST",
                         data: {
-                            type: 2,
+                            type: 1,
                             email: email,
                             password: password
                         },
@@ -78,7 +78,7 @@
                         success: function(dataResult) {
                             var dataResult = JSON.parse(dataResult);
                             if (dataResult.statusCode == 200) {
-                                location.href = 'dash_etud.php';
+                                location.href = 'student_dash.php';
                             } else if (dataResult.statusCode == 201) {
                                 alert('Mauvais mail ou mdp');
                             }
